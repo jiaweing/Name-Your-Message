@@ -18,6 +18,7 @@ public Action Command_Say(int iClient, int iArgs)
 {
 	char sMessage[512];
 	GetCmdArgString(sMessage, sizeof(sMessage));
+	StripQuotes(sMessage);
 	
 	SetClientName(iClient, sMessage);
 }
